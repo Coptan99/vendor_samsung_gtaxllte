@@ -76,13 +76,19 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gtaxlwifi/proprietary/lib/libuniplugin.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libuniplugin.so \
     vendor/samsung/gtaxlwifi/proprietary/vendor/lib/libstainkiller.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstainkiller.so
 
-# DRM - from "crosshatch-user 11 RQ1A.201205.003 6906706 release-keys"
+# DRM - from "bonito-user 12 SP2A.220405.003 8210211 release-keys"
+# Modifcations made:
+# * The libprotobuf-cpp-lite-3.9.1.so dependency in libwvhidl.so
+#   has been replaced with libprotobuf-cpp-lite.so:
+# $ patchelf --replace-needed libprotobuf-cpp-lite-3.9.1.so libprotobuf-cpp-lite.so libwvhidl.so
+# * The useless vendor.move_data_sh service has been removed from
+#   android.hardware.drm@1.4-service.widevine.rc
 PRODUCT_COPY_FILES += \
     vendor/samsung/gtaxlwifi/proprietary/vendor/lib64/libwvhidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwvhidl.so \
-    vendor/samsung/gtaxlwifi/proprietary/vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.3-service.widevine.rc \
-    vendor/samsung/gtaxlwifi/proprietary/vendor/bin/hw/android.hardware.drm@1.3-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.3-service.widevine
+    vendor/samsung/gtaxlwifi/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
+    vendor/samsung/gtaxlwifi/proprietary/vendor/bin/hw/android.hardware.drm@1.4-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.4-service.widevine
 
-# aptX - from "crosshatch-user 11 RQ1A.201205.003 6906706 release-keys"
+# aptX - from "bonito-user 12 SP2A.220405.003 8210211 release-keys"
 PRODUCT_COPY_FILES += \
     vendor/samsung/gtaxlwifi/proprietary/system_ext/lib64/libaptX_encoder.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libaptX_encoder.so \
     vendor/samsung/gtaxlwifi/proprietary/system_ext/lib64/libaptXHD_encoder.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libaptXHD_encoder.so
