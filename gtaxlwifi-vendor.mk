@@ -116,6 +116,3 @@ PRODUCT_COPY_FILES += \
 # wcnss_filter - for Bluetooth - not from any stock firmware, built from source
 PRODUCT_COPY_FILES += \
     vendor/samsung/gtaxlwifi/proprietary/vendor/bin/wcnss_filter:$(TARGET_COPY_OUT_VENDOR)/bin/wcnss_filter
-
-# Create Mali symlinks for Vulkan and OpenCL
-PRODUCT_PACKAGES += libGLES_mali
