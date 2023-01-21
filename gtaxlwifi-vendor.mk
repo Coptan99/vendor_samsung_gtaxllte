@@ -23,6 +23,12 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gtaxlwifi/proprietary/vendor/firmware/utfbd30.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/utfbd30.bin \
     vendor/samsung/gtaxlwifi/proprietary/vendor/firmware/utfbd32.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/utfbd32.bin
 
+PRODUCT_COPY_FILES += \
+    vendor/samsung/gtaxlwifi/proprietary/patch/lib/libexynosdisplay.so:$(TARGET_COPY_OUT_VENDOR)/lib/libexynosdisplay.so \
+    vendor/samsung/gtaxlwifi/proprietary/patch/lib64/libexynosdisplay.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libexynosdisplay.so \
+    vendor/samsung/gtaxlwifi/proprietary/patch/lib/hw/hwcomposer.exynos5.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/hwcomposer.exynos5.so \
+    vendor/samsung/gtaxlwifi/proprietary/patch/lib64/hw/hwcomposer.exynos5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/hwcomposer.exynos5.so
+
 PRODUCT_PACKAGES += \
     libGLES_mali \
     libExynosOMX_Core.proprietary \
