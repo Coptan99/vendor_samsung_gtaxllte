@@ -30,8 +30,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gtaxllte/proprietary/vendor/etc/plmn_se13.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_se13.bin
 
 PRODUCT_COPY_FILES += \
-    vendor/samsung/gtaxllte/proprietary/patch/lib/libexynosdisplay.so:$(TARGET_COPY_OUT_VENDOR)/lib/libexynosdisplay.so \
-    vendor/samsung/gtaxllte/proprietary/patch/lib64/libexynosdisplay.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libexynosdisplay.so \
+#    vendor/samsung/gtaxllte/proprietary/patch/lib/libexynosdisplay.so:$(TARGET_COPY_OUT_VENDOR)/lib/libexynosdisplay.so \
+#    vendor/samsung/gtaxllte/proprietary/patch/lib64/libexynosdisplay.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libexynosdisplay.so \
     vendor/samsung/gtaxllte/proprietary/patch/lib/hw/hwcomposer.exynos5.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/hwcomposer.exynos5.so \
     vendor/samsung/gtaxllte/proprietary/patch/lib64/hw/hwcomposer.exynos5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/hwcomposer.exynos5.so
 
